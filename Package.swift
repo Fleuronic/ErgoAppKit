@@ -17,7 +17,7 @@ let package = Package(
 		)
 	],
 	dependencies: [
-		.package(path: "https://github.com/Fleuronic/Ergo"),
+		.package(url: "https://github.com/Fleuronic/Ergo", branch: "main")
 	],
 	targets: [
 		.target(
