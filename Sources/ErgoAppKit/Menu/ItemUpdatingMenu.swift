@@ -1,7 +1,7 @@
+// Copyright © Fleuronic LLC. All rights reserved.
 
+import WorkflowMenuUI
 import ViewEnvironment
-
-import class WorkflowMenuUI.ScreenMenu
 
 class ItemUpdatingMenu<View: MenuItemDisplaying>: ScreenMenu<View.Screen> {
 	private let contentView: View
@@ -13,10 +13,14 @@ class ItemUpdatingMenu<View: MenuItemDisplaying>: ScreenMenu<View.Screen> {
 	) {
 		contentView = .init(screen: screen)
 		super.init(screen: screen, environment: environment)
+		delegate = contentView
 	}
 	
 	override func screenDidChange(from previousScreen: View.Screen, previousEnvironment: ViewEnvironment) {
 		super.screenDidChange(from: previousScreen, previousEnvironment: previousEnvironment)
-		items = contentView.menuItems(with: screen)
+
+		if contentView.shouldUpdateItems(with: screen, from: previousScreen) {
+			items = contentView.menuItems(with: screen)
+		}
 	}
 }

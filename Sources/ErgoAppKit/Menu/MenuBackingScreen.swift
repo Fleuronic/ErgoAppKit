@@ -1,10 +1,7 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
+import WorkflowMenuUI
 import ViewEnvironment
-
-import struct WorkflowMenuUI.MenuDescription
-import class WorkflowMenuUI.ScreenMenu
-import protocol WorkflowMenuUI.Screen
 
 public protocol MenuBackingScreen: Screen where View.Screen == Self {
 	associatedtype View: MenuItemDisplaying
