@@ -9,9 +9,4 @@ public protocol MenuItemDisplaying: NSMenuDelegate {
 	init(screen: Screen)
 
 	func menuItems(with screen: Screen) -> [NSMenuItem]
-	func shouldUpdateItems(with screen: Screen, from previousScreen: Screen) -> Bool
-}
-
-public extension MenuItemDisplaying {
-	func shouldUpdateItems(with screen: Screen, from previousScreen: Screen) -> Bool { true }
 }

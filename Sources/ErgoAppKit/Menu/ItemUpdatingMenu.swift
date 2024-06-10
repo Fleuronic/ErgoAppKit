@@ -1,5 +1,6 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
+import AppKit
 import WorkflowMenuUI
 import ViewEnvironment
 
@@ -17,10 +18,15 @@ class ItemUpdatingMenu<View: MenuItemDisplaying>: ScreenMenu<View.Screen> {
 	}
 	
 	override func screenDidChange(from previousScreen: View.Screen, previousEnvironment: ViewEnvironment) {
-		super.screenDidChange(from: previousScreen, previousEnvironment: previousEnvironment)
+		update(with: contentView.menuItems(with: screen))
+	}
+}
 
-		if contentView.shouldUpdateItems(with: screen, from: previousScreen) {
-			items = contentView.menuItems(with: screen)
-		}
+// MARK: -
+public extension NSMenu {
+	func update(with items: [NSMenuItem]) {
+		let difference = items.difference(from: self.items)
+		for case let .remove(index, _, _) in difference.removals { removeItem(at: index) }
+		for case let .insert(index, item, _) in difference.insertions { insertItem(item, at: index) }
 	}
 }
