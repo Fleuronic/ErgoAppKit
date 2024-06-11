@@ -25,8 +25,8 @@ class ItemUpdatingMenu<View: MenuItemDisplaying>: ScreenMenu<View.Screen> {
 // MARK: -
 public extension NSMenu {
 	func update(with items: [NSMenuItem]) {
-		let difference = items.difference(from: self.items)
-		for case let .remove(index, _, _) in difference.removals { removeItem(at: index) }
-		for case let .insert(index, item, _) in difference.insertions { insertItem(item, at: index) }
+		guard self.items != items else { return }
+
+		self.items = items
 	}
 }
