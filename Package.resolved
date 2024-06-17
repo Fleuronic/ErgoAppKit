@@ -10,12 +10,30 @@
       }
     },
     {
+      "identity" : "ergo",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/Ergo",
+      "state" : {
+        "branch" : "main",
+        "revision" : "424ff491beb4d3b0cd833735781d6d5ca2e17c22"
+      }
+    },
+    {
       "identity" : "reactiveswift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ReactiveCocoa/ReactiveSwift.git",
       "state" : {
         "revision" : "40c465af19b993344e84355c00669ba2022ca3cd",
         "version" : "7.1.1"
+      }
+    },
+    {
+      "identity" : "workflow-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/workflow-swift",
+      "state" : {
+        "branch" : "main",
+        "revision" : "aa39ec136ea66988eda063268efe862e1bfb95f6"
       }
     }
   ],
