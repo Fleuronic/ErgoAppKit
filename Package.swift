@@ -17,12 +17,16 @@ let package = Package(
 		)
 	],
 	dependencies: [
-		.package(url: "https://github.com/Fleuronic/Ergo", branch: "main")
+		.package(url: "https://github.com/Fleuronic/Ergo", branch: "main"),
+		.package(url: "https://github.com/Fleuronic/workflow-swift", branch: "main")
 	],
 	targets: [
 		.target(
 			name: "ErgoAppKit",
-			dependencies: ["Ergo"],
+			dependencies: [
+				"Ergo",
+				.product(name: "WorkflowMenuUI", package: "workflow-swift"),
+			],
 			swiftSettings: [.swiftLanguageVersion(.v6)]
 		),
 		.target(
