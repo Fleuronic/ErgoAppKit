@@ -1,6 +1,7 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
-import AppKit
+public import AppKit
+
 import WorkflowMenuUI
 import ViewEnvironment
 

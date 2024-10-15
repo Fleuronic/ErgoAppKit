@@ -1,7 +1,7 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
-import WorkflowMenuUI
-import ViewEnvironment
+public import WorkflowMenuUI
+public import ViewEnvironment
 
 public protocol MenuBackingScreen: Screen where View.Screen == Self {
 	associatedtype View: MenuItemDisplaying

@@ -1,7 +1,7 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
-import AppKit
-import WorkflowMenuUI
+public import AppKit
+public import WorkflowMenuUI
 
 public protocol MenuItemDisplaying: NSMenuDelegate {
 	associatedtype Screen: WorkflowMenuUI.Screen
