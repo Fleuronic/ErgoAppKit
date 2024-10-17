@@ -1,7 +1,12 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
+#if swift(<5.9)
+import WorkflowMenuUI
+import ViewEnvironment
+#else
 public import WorkflowMenuUI
 public import ViewEnvironment
+#endif
 
 public protocol MenuBackingScreen: Screen where View.Screen == Self {
 	associatedtype View: MenuItemDisplaying
