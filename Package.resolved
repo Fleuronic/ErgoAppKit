@@ -1,5 +1,4 @@
 {
-  "originHash" : "fcc2f5ecc6d7961c4ec2950667ce8a4e0426901a22796cdbc38c695ab417568d",
   "pins" : [
     {
       "identity" : "ergo",
@@ -7,7 +6,7 @@
       "location" : "https://github.com/Fleuronic/Ergo",
       "state" : {
         "branch" : "main",
-        "revision" : "afc5c0d7b7a41453994f01fc714c77c32a50ca8d"
+        "revision" : "81b6cb2ae81514b1eed27ad5cb3d230f9e8aef48"
       }
     },
     {
@@ -25,9 +24,9 @@
       "location" : "https://github.com/Fleuronic/workflow-swift",
       "state" : {
         "branch" : "main",
-        "revision" : "91e659bff5994fb582c8b220c65e4e7fa7b9eeb0"
+        "revision" : "8e7cbc26910dd87248e15dc80417cea3d2c03664"
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }

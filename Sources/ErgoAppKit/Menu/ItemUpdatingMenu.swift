@@ -1,16 +1,21 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
-public import AppKit
-
+#if swift(<5.9)
+import AppKit
 import WorkflowMenuUI
 import ViewEnvironment
+#else
+public import AppKit
+public import WorkflowMenuUI
+public import ViewEnvironment
+#endif
 
 class ItemUpdatingMenu<View: MenuItemDisplaying>: ScreenMenu<View.Screen> {
 	private let contentView: View
 
 	// MARK: ScreenMenu
 	required init(
-		screen: View.Screen, 
+		screen: View.Screen,
 		environment: ViewEnvironment
 	) {
 		contentView = .init(screen: screen)
