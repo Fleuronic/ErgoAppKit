@@ -6,7 +6,7 @@
       "location" : "https://github.com/Fleuronic/Ergo",
       "state" : {
         "branch" : "main",
-        "revision" : "81b6cb2ae81514b1eed27ad5cb3d230f9e8aef48"
+        "revision" : "db011bc292c3fdedb0e5960cf53460d5aeef07f3"
       }
     },
     {
@@ -15,7 +15,7 @@
       "location" : "https://github.com/Fleuronic/ReactiveSwift.git",
       "state" : {
         "branch" : "main",
-        "revision" : "db54c7d9b7cf3ed89962eac4b28a4c05df855956"
+        "revision" : "7b922072ceeb867e2550d4a76558763b16daa6a6"
       }
     },
     {
@@ -24,7 +24,7 @@
       "location" : "https://github.com/Fleuronic/workflow-swift",
       "state" : {
         "branch" : "main",
-        "revision" : "8e7cbc26910dd87248e15dc80417cea3d2c03664"
+        "revision" : "39debabbb81826e4e639b0a7018d78c28f2eeb5d"
       }
     }
   ],
