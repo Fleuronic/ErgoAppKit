@@ -1,14 +1,8 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
-#if swift(<5.9)
 import AppKit
 import WorkflowMenuUI
 import ViewEnvironment
-#else
-public import AppKit
-public import WorkflowMenuUI
-public import ViewEnvironment
-#endif
 
 class ItemUpdatingMenu<View: MenuItemDisplaying>: ScreenMenu<View.Screen> {
 	private let contentView: View

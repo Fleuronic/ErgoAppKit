@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
 	name: "ErgoAppKit",
 	platforms: [
-		.macOS(.v10_15)
+		.macOS(.v14)
 	],
 	products: [
 		.library(
@@ -18,7 +18,7 @@ let package = Package(
 	],
 	dependencies: [
 		.package(url: "https://github.com/Fleuronic/Ergo", branch: "main"),
-		.package(url: "https://github.com/Fleuronic/workflow-swift", branch: "main")
+		.package(url: "https://github.com/jordanekay/workflow-swift", branch: "main")
 	],
 	targets: [
 		.target(
@@ -40,7 +40,7 @@ let package = Package(
 
 for target in package.targets {
 	target.swiftSettings = [
-		.enableUpcomingFeature("ExistentialAny"),
-		.enableUpcomingFeature("InternalImportsByDefault")
+		.enableExperimentalFeature("StrictConcurrency"),
+		.enableUpcomingFeature("ExistentialAny")
 	]
 }
