@@ -3,7 +3,8 @@
 public import AppKit
 public import WorkflowMenuUI
 
-public protocol MenuItemDisplaying: NSMenuDelegate {
+@MainActor
+public protocol MenuItemDisplaying: NSMenuDelegate, SendableMetatype {
 	associatedtype Screen: WorkflowMenuUI.Screen
 
 	init(screen: Screen)

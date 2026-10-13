@@ -18,6 +18,7 @@ public extension MenuBackingScreen {
 	typealias ScreenString = (Strings.Type) -> String
 
 	// MARK: Screen
+	@MainActor
 	func menuDescription(environment: ViewEnvironment) -> MenuDescription {
 		.init(
 			type: ItemUpdatingMenu<View>.self,
